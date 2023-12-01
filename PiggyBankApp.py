@@ -2,6 +2,7 @@ import streamlit as st
 from forex_python.converter import CurrencyRates
 
 st.header('Piggy Bank Calculator :pig: :moneybag:')
+st.divider()
 
 base_currency = "CAD"
 with st.sidebar:
@@ -80,7 +81,7 @@ print(f"CAD : {cad}")
 
 total_value = 0.0
 
-
+st.subheader('how many coins in my piggy bank? :thinking_face: ', divider='rainbow')
 
 col1, col2, col3 = st.columns(3)
 
@@ -136,10 +137,6 @@ with col3:
     st.divider()
     st.text_area("Total (INR $) :flag-in: ", value=inr)
     st.divider()
-
-#st.write(st.session_state)
-
-#base_currency = st.selectbox('Pick your base currency',['USD','CAD', 'INR'])
 
 c = CurrencyRates()
 
