@@ -130,17 +130,17 @@ if(base_currency == "CAD"):
     inr_cad = c.get_rate('INR', 'CAD')
     usd_cad = c.get_rate('USD', 'CAD')
     total_cad = inr_cad*inr + usd_cad*usd + cad
-    print(f"Total value in CAD = $ {total_cad}")
-    st.sidebar.write(f"Total value in CAD = $ {total_cad}")
+    print(f"Total value in CAD = $ {total_cad:.2f}")
+    st.sidebar.write(f"Total value in CAD = $ {total_cad:.2f}")
 elif(base_currency == "INR"):
     cad_inr = c.get_rate('CAD', 'INR')
     usd_inr = c.get_rate('USD', 'INR')
     total_inr = cad_inr*cad + usd_inr*usd + inr
-    print(f"Total value in INR = ₹ {total_inr}")
-    st.sidebar.write(f"Total value in INR = ₹ {total_inr}")
+    print(f"Total value in INR = ₹ {total_inr:.2f}")
+    st.sidebar.write(f"Total value in INR = ₹ {total_inr:.2f}")
 else:
     inr_usd = c.get_rate('INR', 'USD')
     cad_usd = c.get_rate('CAD', 'USD')
     total_usd = inr_usd*inr + cad_usd*cad + usd
-    print(f"Total value in USD = $ {total_usd}")
-    st.sidebar.write(f"Total value in USD = $ {total_usd}")
+    print(f"Total value in USD = $ {total_usd:.2f}")
+    st.sidebar.write(f"Total value in USD = $ {total_usd:.2f}")
