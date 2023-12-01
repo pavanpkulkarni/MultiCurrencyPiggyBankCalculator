@@ -86,6 +86,21 @@ st.subheader('how many coins in my piggy bank? :thinking_face: ', divider='rainb
 col1, col2, col3 = st.columns(3)
 
 with col1:
+    st.header("INR :flag-in:")
+    st.number_input("p1", placeholder="# of coins", step=1, key='inr_001')
+    st.number_input("p5", placeholder="# of coins", step=1, key='inr_005')
+    st.number_input("p10", placeholder="# of coins", step=1, key='inr_010')
+    st.number_input("p25", placeholder="# of coins", step=1, key='inr_025')
+    st.number_input("p50", placeholder="# of coins", step=1, key='inr_050')
+    st.number_input("₹1", placeholder="# of coins", step=1, key='inr_100')
+    st.number_input("₹2", placeholder="# of coins", step=1, key='inr_200')
+    st.number_input("₹5", placeholder="# of coins", step=1, key='inr_500')
+    st.number_input("₹10", placeholder="# of coins", step=1, key='inr_1000')
+    st.divider()
+    st.text_area("Total (INR $) :flag-in: ", value=inr)
+    st.divider()
+
+with col2:
     st.header("CAD :flag-ca:")
     st.number_input("¢1", placeholder="# of coins", step=1, key='cad_001')
     st.number_input("¢5", placeholder="# of coins", step=1, key='cad_005')
@@ -104,7 +119,7 @@ with col1:
     st.text_area("Total (CAD $) :flag-ca: ", value=cad)
     st.divider()
 
-with col2:
+with col3:
     st.header("USD :flag-us:")
     st.number_input("¢1", placeholder="# of coins", step=1, key='usd_001')
     st.number_input("¢5", placeholder="# of coins", step=1, key='usd_005')
@@ -121,21 +136,6 @@ with col2:
     st.markdown('#')
     st.divider()
     st.text_area("Total (USD $) :flag-us: ", value=usd)
-    st.divider()
-
-with col3:
-    st.header("INR :flag-in:")
-    st.number_input("p1", placeholder="# of coins", step=1, key='inr_001')
-    st.number_input("p5", placeholder="# of coins", step=1, key='inr_005')
-    st.number_input("p10", placeholder="# of coins", step=1, key='inr_010')
-    st.number_input("p25", placeholder="# of coins", step=1, key='inr_025')
-    st.number_input("p50", placeholder="# of coins", step=1, key='inr_050')
-    st.number_input("₹1", placeholder="# of coins", step=1, key='inr_100')
-    st.number_input("₹2", placeholder="# of coins", step=1, key='inr_200')
-    st.number_input("₹5", placeholder="# of coins", step=1, key='inr_500')
-    st.number_input("₹10", placeholder="# of coins", step=1, key='inr_1000')
-    st.divider()
-    st.text_area("Total (INR $) :flag-in: ", value=inr)
     st.divider()
 
 c = CurrencyRates()
