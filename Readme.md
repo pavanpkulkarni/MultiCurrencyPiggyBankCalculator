@@ -1,5 +1,5 @@
 
-## Multi Currency PiggyBank Calculator
+# Multi Currency PiggyBank Calculator
 
 This project is was a fun wya to explore and learn Streamlit.
 
@@ -9,7 +9,7 @@ It was not only hard to calculate the total $$$ but also hard enough to keep a t
 Hence Streamlit to the rescue 🎯
 
 
-###TODO:
+## TODO:
 
 1. I need to work on refactoring the code to make it look neat
 2. Add error handling
